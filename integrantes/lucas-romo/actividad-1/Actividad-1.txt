@@ -1,0 +1,222 @@
+APLICACIONES WEB 1 — ACTIVIDAD 1
+Descubrimiento de producto, UX y requerimientos
+
+CASO SELECCIONADO: SÍSIFO GYM — GIMNASIO Y CENTRO DE ENTRENAMIENTO
+
+
+1. FICHA DE NEGOCIO MÍNIMA
+
+Nombre del negocio:
+Sísifo Gym.
+
+Objetivo del negocio:
+Digitalizar la gestión de las clases semanales, permitiendo a los clientes consultar horarios, reservar cupos en tiempo real y comprar o renovar sus pases mensuales de manera online.
+
+Modelo de monetización:
+El gimnasio obtiene ingresos principalmente mediante la venta y renovación de pases mensuales y otros planes de entrenamiento, utilizando la plataforma como canal digital para facilitar estas operaciones.
+
+
+2. CONSTRUCCIÓN DE PROTO-PERSONA
+
+Perfil
+
+Nombre:
+Martín González.
+
+Edad:
+24 años.
+
+Ocupación:
+Estudiante universitario y trabajador part-time.
+
+Dispositivo principal:
+Smartphone.
+
+Otros dispositivos:
+Notebook y computadora de escritorio.
+
+Comportamiento y hábitos:
+Martín utiliza habitualmente su celular para organizar actividades, consultar información y realizar compras o pagos online. Entrena varias veces por semana y necesita adaptar sus horarios de gimnasio a sus obligaciones académicas y laborales. Prefiere realizar gestiones de manera digital y espera contar con información actualizada sobre horarios y disponibilidad.
+
+Objetivos y necesidades:
+
+- Consultar rápidamente la grilla semanal de clases.
+- Conocer la disponibilidad de cupos antes de reservar.
+- Reservar clases desde el celular.
+- Comprar o renovar su pase mensual online.
+- Organizar sus entrenamientos según su disponibilidad.
+
+Frustraciones:
+
+- Tener que comunicarse con el gimnasio para consultar horarios o disponibilidad.
+- Descubrir que una clase está completa al intentar reservar.
+- Tener que acudir personalmente al gimnasio para renovar o comprar un pase.
+
+
+3. HISTORIAS DE USUARIO
+
+Historia de Usuario 1 — Orientada al objetivo:
+
+Como cliente del gimnasio, quiero consultar la grilla semanal de clases y reservar un cupo en tiempo real para organizar mis entrenamientos según mis horarios disponibles.
+
+Historia de Usuario 2 — Orientada a una frustración:
+
+Como cliente del gimnasio, quiero comprar o renovar mi pase mensual desde la página web para evitar tener que llamar o acudir personalmente al gimnasio.
+
+
+4. REQUERIMIENTOS FUNCIONALES DEL FRONTEND
+
+RF-01 — Consultar horarios:
+El sistema debe permitir visualizar la grilla semanal de clases, mostrando día, horario, disciplina, instructor y cupos disponibles.
+
+RF-02 — Consultar disponibilidad:
+El sistema debe mostrar en tiempo real la cantidad de cupos disponibles para cada clase antes de realizar una reserva.
+
+RF-03 — Reservar una clase:
+El sistema debe permitir al usuario seleccionar una clase disponible y confirmar la reserva desde la interfaz web.
+
+RF-04 — Cancelar una reserva:
+El sistema debe permitir al usuario cancelar una reserva previamente realizada, siempre que se encuentre dentro del plazo establecido por el gimnasio.
+
+RF-05 — Comprar o renovar pase:
+El sistema debe permitir seleccionar un pase y completar el proceso de compra o renovación online.
+
+RF-06 — Consultar estado de membresía:
+El sistema debe permitir al usuario consultar el estado de su membresía, incluyendo plan actual, fecha de vencimiento y días restantes.
+
+Estos requerimientos permiten cumplir directamente con las historias de usuario planteadas y con los objetivos principales del negocio.
+
+
+5. USO DE INTELIGENCIA ARTIFICIAL
+
+PROMPT 1 — Proto-persona e historias de usuario
+
+Actúa como un diseñador de producto UX/UI. Para un gimnasio y centro de entrenamiento cuyo objetivo es digitalizar la grilla de clases semanales, permitir la reserva de cupos en tiempo real y la compra o renovación de pases mensuales online, ayúdame a definir una proto-persona detallada que incluya dos frustraciones principales y propón dos historias de usuario siguiendo la plantilla estándar de Scrum.
+
+
+PROMPT 2 — Requerimientos funcionales
+
+Actúa como diseñador de producto UX/UI y analista de requerimientos. Para Sísifo Gym, un gimnasio y centro de entrenamiento que busca digitalizar la grilla de clases semanales, permitir la reserva de cupos en tiempo real y la compra o renovación de pases mensuales online, analiza las historias de usuario definidas y propone al menos cuatro requerimientos funcionales necesarios para el frontend. Para cada uno indica un identificador, nombre y descripción clara, priorizando funcionalidades interactivas relacionadas con horarios, disponibilidad, reservas y gestión de pases.
+
+
+6. AUDITORÍA Y REFINAMIENTO DE LA RESPUESTA DE IA
+
+La respuesta generada por la inteligencia artificial fue utilizada como punto de partida para el análisis. El grupo revisó y ajustó la redacción para eliminar funcionalidades innecesarias y concentrarse en las necesidades principales del caso de negocio.
+
+Se priorizaron las funcionalidades relacionadas con la consulta de horarios, la visualización de cupos disponibles, la reserva de clases y la compra o renovación de pases mensuales, ya que responden directamente a los objetivos y frustraciones de la proto-persona.
+
+Los requerimientos fueron redactados de forma clara, verificable y orientada a las acciones que el usuario realiza desde la interfaz web.
+
+
+7. SITEMAP / ESTRUCTURA DEL SITIO
+
+ÁREA PÚBLICA — USUARIOS NO REGISTRADOS
+
+1.0 Inicio (Home)
+    1.1 Propuesta de valor y beneficios.
+    1.2 Accesos rápidos: "Ver Horarios" y "Comprar Pase".
+
+2.0 Planes y Precios
+    2.1 Detalle de pases: Mensual, Trimestral y Anual.
+    2.2 Beneficios de cada suscripción.
+
+3.0 Instalaciones y Disciplinas
+    3.1 Galería del gimnasio y equipamiento.
+    3.2 Descripción de clases y modalidades de entrenamiento libre.
+
+4.0 Contacto y FAQ
+    4.1 Preguntas frecuentes.
+    4.2 Información sobre cupos y medios de pago.
+    4.3 Formulario de contacto.
+    4.4 Ubicación de Sísifo Gym.
+
+5.0 Autenticación
+    5.1 Iniciar Sesión (Login).
+    5.2 Crear Cuenta (Registro).
+    5.3 Recuperar contraseña.
+
+
+ÁREA PRIVADA — USUARIOS LOGUEADOS / DASHBOARD
+
+6.0 Panel Principal (Dashboard del Usuario)
+    6.1 Estado actual de la membresía: Activa/Vencida.
+    6.2 Días restantes de la membresía.
+    6.3 Próximo turno reservado.
+    6.4 Acceso rápido para cancelar una reserva.
+
+7.0 Grilla y Reservas
+    7.1 Calendario semanal interactivo.
+    7.2 Filtros por día y horario.
+    7.3 Visualización de cupos disponibles.
+    7.4 Selección de clase.
+    7.5 Confirmación de reserva mediante modal/pop-up.
+    7.6 Cancelación de reservas.
+
+8.0 Mi Membresía y Pagos
+    8.1 Visualización del plan actual.
+    8.2 Renovar o cambiar el plan.
+    8.3 Proceso de Checkout.
+    8.4 Pasarela de pago.
+    8.5 Historial de pagos.
+    8.6 Consulta de comprobantes.
+
+9.0 Mi Perfil
+    9.1 Historial de entrenamiento y turnos asistidos.
+    9.2 Configuración de la cuenta.
+    9.3 Edición de datos personales.
+    9.4 Cambio de contraseña.
+    9.5 Gestión de métodos de pago guardados.
+
+
+8. CONCEPTOS DE ARQUITECTURA WEB
+
+MPA (Multi-Page Application):
+Aplicación web en la que cada sección o página requiere cargar un nuevo documento HTML desde el servidor al navegar.
+
+SPA (Single-Page Application):
+Aplicación web que carga una página inicial y actualiza dinámicamente su contenido mediante JavaScript, evitando recargas completas al navegar entre secciones.
+
+SSR (Server-Side Rendering):
+El servidor genera el HTML de la página antes de enviarlo al navegador. Esto permite que el contenido principal esté disponible desde la primera respuesta y puede favorecer el SEO.
+
+CSR (Client-Side Rendering):
+El navegador recibe una estructura inicial y utiliza JavaScript para generar, cargar y actualizar dinámicamente el contenido de la aplicación.
+
+Cliente:
+Es el software utilizado por el usuario para acceder a la aplicación, generalmente un navegador web como Chrome, Firefox o Edge.
+
+Servidor:
+Es el sistema que recibe las solicitudes del cliente, procesa la información y devuelve respuestas, datos o recursos.
+
+Comunicación Cliente-Servidor:
+El cliente realiza solicitudes al servidor y este responde con los recursos o información solicitados. Esta comunicación permite que el usuario interactúe con las funcionalidades de la aplicación.
+
+
+9. PROTOCOLOS DE COMUNICACIÓN
+
+HTTP:
+Protocolo utilizado para la comunicación entre clientes y servidores web. Permite enviar solicitudes y recibir respuestas, como páginas HTML, imágenes, archivos y datos.
+
+HTTPS:
+Versión segura de HTTP que utiliza cifrado TLS para proteger la información transmitida entre el cliente y el servidor.
+
+
+10. SEO Y GEO
+
+SEO (Search Engine Optimization):
+Conjunto de técnicas utilizadas para mejorar la visibilidad y el posicionamiento de un sitio web en motores de búsqueda como Google. Incluye aspectos como contenido, estructura HTML, velocidad de carga, accesibilidad y palabras clave.
+
+GEO (Generative Engine Optimization):
+Conjunto de prácticas orientadas a facilitar que los sistemas de inteligencia artificial y motores de búsqueda generativos comprendan, interpreten y utilicen el contenido de un sitio web. Busca presentar información clara, estructurada, relevante y confiable.
+
+
+11. BOCETO, WIREFRAME Y MOCKUP
+
+Boceto:
+Representación inicial y rápida de una idea. Permite definir de manera sencilla la distribución general de los elementos de una interfaz.
+
+Wireframe:
+Esquema estructural de una página que representa la ubicación, jerarquía y distribución de sus elementos sin centrarse en colores, imágenes o detalles visuales.
+
+Mockup:
+Representación visual más completa y cercana al diseño final. Incluye elementos como colores, tipografías, imágenes, botones y otros componentes de la interfaz.
