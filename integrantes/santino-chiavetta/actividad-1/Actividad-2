@@ -1,0 +1,232 @@
+====================================================================
+ACTIVIDAD 2 - Aplicaciones Web 1
+MPA/SPA y Wireframes | Sisifo Gym
+====================================================================
+
+Che, esta es la segunda parte del trabajo del gimnasio Sisifo Gym.
+Seguimos con la misma idea de la Actividad 1: la app tiene que dejar
+a la gente ver los horarios de las clases, reservar un lugar al
+toque y comprar o renovar el pase sin tener que ir hasta el gym o
+llamar por telefono. Pensamos todo con Martin en la cabeza (el
+personaje que armamos: 24 anios, hace un monton de cosas desde el
+celu, entre estudio y curro part-time).
+
+
+--------------------------------------------------------------------
+1. EL SITEMAP (como se organiza el sitio)
+--------------------------------------------------------------------
+
+Armamos el arbol de paginas pensando en lo que Martin necesita hacer
+todo el tiempo. Quedo asi:
+
+- Home (la portada)                                    -> MPA
+  - Clases (la grilla semanal)                          -> SPA
+    - Detalle de la clase + Reservar                     -> SPA
+    - Confirmacion de que reservaste                     -> SPA
+  - Pases y precios                                     -> MPA
+    - Checkout (comprar o renovar el pase)                -> SPA
+  - Mi cuenta (hay que estar logueado)                  -> SPA
+    - Mis reservas                                        -> SPA
+    - Mi pase (cuando vence, etc)                         -> SPA
+    - Historial                                           -> SPA
+  - Nosotros (info del gym)                             -> MPA
+  - Contacto / Como llegar                              -> MPA
+  - Login / Registrarse                                 -> MPA
+
+Ojo: el diagrama en forma de arbol (con colores, todo mas visual)
+esta en la version PDF/Word de la entrega. Aca lo dejamos en formato
+lista para que se entienda igual.
+
+
+--------------------------------------------------------------------
+2. MPA vs SPA - que va como que y por que
+--------------------------------------------------------------------
+
+2.1 Lo que armamos como MPA (paginas "de toda la vida", una por URL)
+-----------------------------------------------------------------------
+Estas son las paginas mas de "leer info" que de "interactuar todo el
+tiempo", asi que tiene sentido que cada una sea su propia pagina
+independiente:
+
+- Home: es la puerta de entrada, tiene que aparecer bien en Google
+  cuando alguien busca "gimnasio" o "clases de entrenamiento", asi
+  que le conviene cargar rapido y tener su URL propia.
+
+- Pases y precios (la parte de "mirar los planes"): es info que
+  practicamente no cambia todo el tiempo, entonces no hace falta
+  toda la maquinaria de JS, mejor que sea liviana y quede bien
+  indexada.
+
+- Nosotros: es texto institucional, no cambia casi nunca, asi que
+  MPA de una.
+
+- Contacto / Ubicacion: misma logica, y ademas ayuda a que Google
+  Maps la agarre bien cuando alguien busca "gimnasios cerca".
+
+- Login / Registro: es una pantalla que se usa poco (una vez cada
+  tanto), no necesita ser superdinamica, mejor simple y segura.
+
+2.2 Lo que armamos como SPA (las partes donde todo se mueve solo)
+-----------------------------------------------------------------------
+Estos son los modulos donde SI o SI necesitas que las cosas se
+actualicen solas, sin refrescar la pagina, porque si no la
+experiencia es un embole:
+
+- La grilla de clases: cuando filtras por dia, horario o tipo de
+  entrenamiento, tiene que cambiar al toque sin recargar todo. Y los
+  cupos disponibles tienen que verse actualizados en el momento.
+
+- Detalle de clase + Reserva: apenas alguien reserva, el cupo se
+  tiene que descontar ya (para vos y para cualquiera que este mirando
+  esa clase en ese momento). Eso no puede depender de recargar la
+  pagina.
+
+- El checkout (comprar/renovar pase): un formulario de pago se
+  siente mucho mejor si te valida los datos al toque y te confirma
+  la compra sin mandarte a otra pantalla en blanco.
+
+- Mi cuenta (reservas, pase, historial): esto lo va a usar Martin un
+  monton de veces por semana desde el celu, asi que cuanto mas se
+  sienta como una app y menos como una web que recarga cada dos
+  clics, mejor.
+
+2.3 En dos palabras: por que separar asi
+--------------------------------------------
+Las MPA te dan mejor posicionamiento en buscadores y cargan mas
+rapido porque no arrastran todo el peso de JavaScript. Las SPA te dan
+fluidez ahi donde el usuario esta constantemente tocando cosas que
+cambian (cupos, reservas, pagos). Como Martin entra un monton de
+veces por semana desde el celular, tiene todo el sentido que
+justamente esas partes "movedizas" sean las que se sientan mas
+rapidas y sin cortes.
+
+
+--------------------------------------------------------------------
+3. LOS BOCETOS A MANO (la primera pasada, bien basica)
+--------------------------------------------------------------------
+
+Antes de ponernos a diagramar en la compu, sacamos 3 bocetos a mano
+de las pantallas mas importantes, pensando version escritorio y
+version celular para cada una.
+
+>> Boceto 1: Home / Grilla semanal
+   Escritorio: arriba el logo y el menu, despues un banner grande
+   con la frase tipo "Entrena a tu ritmo" y un boton de reservar,
+   abajo los filtros (dia / horario / tipo), y despues la grilla
+   entera con todas las clases de la semana (cada casillero con el
+   nombre de la clase, los cupos que quedan y un boton reservar).
+   Al final el footer.
+   Celu: arriba el logo con el menu hamburguesa, el banner, despues
+   tabs con los dias de la semana (L M X J V S D), los filtros
+   colapsados en un desplegable, y abajo la lista de clases en
+   tarjetitas verticales, cada una con su boton de reservar. Al pie,
+   una barra de navegacion fija.
+
+>> Boceto 2: Detalle de la clase / Reservar
+   Escritorio: menu arriba, despues dos columnas - a la izquierda el
+   nombre de la clase con el profe y una descripcion corta, a la
+   derecha el horario, los cupos que quedan y el boton grande de
+   reservar. Debajo, un cartel de confirmacion que aparece cuando ya
+   reservaste, y un link para volver a la grilla.
+   Celu: arriba un boton de volver, despues la info de la clase, el
+   horario y cupos, la confirmacion (si ya reservaste), y todo el
+   tiempo el boton de "Reservar cupo" pegado abajo de la pantalla
+   para que siempre este a mano.
+
+>> Boceto 3: Pases y compra/renovacion
+   Escritorio: los tres planes (mensual, trimestral, anual) en
+   tarjetas una al lado de la otra, cada una con su precio y boton
+   de comprar. Mas abajo el formulario de checkout con los datos de
+   pago y el boton de confirmar compra.
+   Celu: los mismos tres planes pero apilados uno debajo del otro, el
+   checkout mas simple (una sola columna), y el boton de confirmar
+   siempre fijo abajo.
+
+(Los dibujos hechos a mano, escaneados/con estilo boceto, estan en
+la version PDF/Word de la entrega)
+
+
+--------------------------------------------------------------------
+4. WIREFRAME DIGITAL (ya mas prolijo, en Mid-Fi)
+--------------------------------------------------------------------
+
+Con esos bocetos como base, pasamos todo a un wireframe digital mas
+prolijo, respetando las medidas que pide la consigna: 1440px para
+escritorio (grilla de 12 columnas) y 375px para celular (grilla de 4
+columnas). La idea y el orden de cada pantalla es la misma que en el
+boceto a mano, pero ahora con botones reales, tarjetas bien
+definidas y todo mas ordenado visualmente.
+
+- Wireframe 1: Home / Grilla semanal de clases
+- Wireframe 2: Detalle de clase / Reserva
+- Wireframe 3: Pases y compra/renovacion
+
+Las capturas de estos wireframes (lo que armamos como si fuera el
+lienzo de Canva) estan en la entrega en PDF/Word.
+
+
+--------------------------------------------------------------------
+5. LO QUE USAMOS DE IA
+--------------------------------------------------------------------
+
+Prompt 1 (para el sitemap y la movida MPA/SPA)
+------------------------------------------------
+Le tiramos esto:
+
+"Actua como un arquitecto de software web. Tengo un proyecto de un
+gimnasio y centro de entrenamiento llamado Sisifo Gym, cuyo objetivo
+es digitalizar la grilla de clases semanales, permitir la reserva de
+cupos en tiempo real y la compra o renovacion de pases mensuales
+online. Propone un sitemap en formato de lista para el sitio web y
+recomiendame que secciones deberian ser MPA y cuales SPA, justificando
+el impacto en la experiencia de usuario y el rendimiento."
+
+Que nos tiro: nos armo un sitemap con seis secciones grandes (Home,
+Clases, Pases, Mi Cuenta, Nosotros/Contacto y Login/Registro), y nos
+dijo mas o menos lo mismo que terminamos usando: lo estatico y lo que
+necesita posicionarse en Google como MPA (Home, Pases, Nosotros,
+Contacto, Login), y lo que cambia todo el tiempo o necesita sentirse
+fluido como SPA (la grilla con los filtros y cupos, la reserva, el
+checkout y el panel de cuenta).
+
+Prompt 2 (para pensar el celular primero)
+---------------------------------------------
+Le pedimos:
+
+"Actuando como disenador UX/UI mobile-first: para Sisifo Gym, cuyas
+historias de usuario son (1) consultar la grilla semanal de clases y
+reservar un cupo en tiempo real, y (2) comprar o renovar el pase
+mensual desde la web, sugeri la distribucion recomendada de
+componentes UX para las pantallas de grilla de clases, detalle/reserva
+y pases/checkout en dispositivos moviles."
+
+Que nos tiro: para la grilla, mejor tabs de dias arriba en vez de una
+tabla gigante (en el celu una tabla completa no entra bien), y las
+clases en tarjetas verticales con los cupos bien a la vista. Para el
+detalle/reserva, dejar el boton principal fijo abajo de la pantalla
+para no tener que estar scrolleando para encontrarlo. Y para pases y
+checkout, los planes apilados en vertical con el precio bien
+destacado, y un formulario de una sola columna, tambien con el boton
+de confirmar pegado abajo.
+
+
+--------------------------------------------------------------------
+6. QUE LE CAMBIAMOS A LO QUE TIRO LA IA
+--------------------------------------------------------------------
+
+Usamos lo que nos dio la IA como punto de partida, pero no lo
+copiamos y pegamos tal cual. Le agregamos cosas que no habia
+mencionado (como la pantalla de confirmacion de reserva y el
+historial dentro de Mi Cuenta), le cambiamos nombres a algunas
+secciones para que se entiendan mejor, y chequeamos que cada cosa que
+pusimos como MPA o SPA tuviera que ver con algo que realmente
+pedimos en los requerimientos de la Actividad 1 (del RF-01 al RF-06),
+para no meter funcionalidades de mas que nadie pidio. Tambien tomamos
+la idea del boton fijo abajo en celular y la usamos en los tres
+bocetos/wireframes, porque tiene mucho sentido con una de las
+frustraciones que definimos para Martin: no quiere tener que salir
+de la app para hacer un tramite.
+
+====================================================================
+Eso seria. Cualquier cosa se agrega o se ajusta antes de subirlo.
+====================================================================
