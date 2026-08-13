@@ -1,0 +1,157 @@
+ACTIVIDAD 2 - APLICACIONES WEB 1
+MPA, SPA Y WIREFRAMES - SÍSIFO GYM
+
+La segunda actividad continúa con la propuesta desarrollada en la Actividad 1 para Sísifo Gym.
+
+El objetivo principal de la aplicación es permitir que los clientes puedan consultar los horarios de las clases, reservar un cupo en tiempo real y comprar o renovar su pase sin necesidad de asistir presencialmente al gimnasio o comunicarse por teléfono.
+
+Para el análisis de la experiencia de usuario se continúa utilizando como referencia a Martín, el usuario definido en la actividad anterior: una persona de 24 años que utiliza frecuentemente el celular para realizar actividades relacionadas con sus estudios y trabajo.
+
+1. SITEMAP
+
+La estructura del sitio fue organizada teniendo en cuenta las principales acciones que necesita realizar el usuario.
+
+* Home - MPA
+* Clases - SPA
+
+  * Detalle de la clase y reserva - SPA
+  * Confirmación de reserva - SPA
+* Pases y precios - MPA
+
+  * Checkout para comprar o renovar el pase - SPA
+* Mi cuenta - SPA
+
+  * Mis reservas - SPA
+  * Mi pase - SPA
+  * Historial - SPA
+* Nosotros - MPA
+* Contacto / Cómo llegar - MPA
+* Login / Registro - MPA
+
+El diagrama visual del sitemap se encuentra incluido en la versión PDF/Word de la entrega.
+
+2. MPA Y SPA
+
+2.1 SECCIONES MPA
+
+Las secciones definidas como MPA corresponden principalmente a contenido informativo o estático, que no necesita actualizarse constantemente.
+
+Home:
+Funciona como punto de entrada al sitio. Además, al tratarse de una página pública, puede favorecer el posicionamiento en buscadores.
+
+Pases y precios:
+Contiene información sobre los diferentes planes disponibles. Como esta información no cambia constantemente, puede funcionar como una página independiente.
+
+Nosotros:
+Contiene información institucional sobre el gimnasio y sus servicios.
+
+Contacto / Cómo llegar:
+Presenta los datos de contacto, ubicación y otra información útil para los visitantes.
+
+Login / Registro:
+Permite el acceso y creación de cuentas. Al ser una acción puntual, no requiere una estructura SPA.
+
+2.2 SECCIONES SPA
+
+Las secciones definidas como SPA corresponden a funcionalidades que requieren mayor interacción y actualización dinámica.
+
+Grilla de clases:
+Permite consultar las clases disponibles y aplicar filtros por día, horario o tipo de entrenamiento sin necesidad de recargar la página.
+
+Detalle y reserva:
+Permite consultar la información de una clase y reservar un cupo. La cantidad de lugares disponibles debe actualizarse de manera dinámica.
+
+Checkout:
+Permite comprar o renovar un pase y validar los datos ingresados de forma inmediata.
+
+Mi cuenta:
+Permite consultar las reservas realizadas, el estado del pase y el historial de actividades.
+
+2.3 JUSTIFICACIÓN
+
+La separación entre MPA y SPA permite utilizar cada modelo según las necesidades de cada sección.
+
+Las páginas MPA son adecuadas para contenido informativo, ya que permiten una estructura simple, tiempos de carga reducidos y mejores posibilidades de posicionamiento en buscadores.
+
+Las secciones SPA son más apropiadas para funcionalidades que requieren interacción constante y actualización de información, como las reservas, los cupos disponibles y el estado de los pases.
+
+Esta organización busca mejorar la experiencia de Martín, especialmente considerando que utilizará principalmente el celular y realizará varias de estas acciones durante la semana.
+
+3. BOCETOS A MANO
+
+Antes de realizar los wireframes digitales, se desarrollaron tres bocetos iniciales a mano. Para cada pantalla se consideraron las versiones de escritorio y celular.
+
+BOCETO 1: HOME / GRILLA SEMANAL
+
+En escritorio se plantea un encabezado con el logo y el menú de navegación, seguido de un banner principal con un mensaje y un botón para reservar.
+
+Debajo se encuentran los filtros de día, horario y tipo de entrenamiento, junto con la grilla semanal de clases. Cada clase muestra su nombre, los cupos disponibles y un botón de reserva. Al final se incluye el footer.
+
+En celular se utiliza un menú hamburguesa, seguido del banner principal. Los días de la semana se presentan mediante pestañas y los filtros se agrupan en un menú desplegable.
+
+Las clases se muestran como tarjetas verticales. También se incorpora una barra de navegación fija en la parte inferior.
+
+BOCETO 2: DETALLE DE CLASE / RESERVA
+
+En escritorio se presenta la información de la clase en dos columnas. En una se encuentra el nombre, profesor y descripción, mientras que en la otra se muestran el horario, los cupos disponibles y el botón para reservar.
+
+Luego de realizar la reserva se muestra un mensaje de confirmación.
+
+En celular se prioriza la información principal de la clase y se incorpora un botón para volver a la grilla.
+
+El botón de "Reservar cupo" permanece fijo en la parte inferior para facilitar el acceso durante la navegación.
+
+BOCETO 3: PASES Y COMPRA O RENOVACIÓN
+
+En escritorio se muestran los tres planes disponibles mediante tarjetas: mensual, trimestral y anual. Cada tarjeta incluye el precio y un botón para realizar la compra.
+
+Debajo se encuentra el formulario de checkout.
+
+En celular los planes se presentan de forma vertical. El checkout se organiza en una sola columna y el botón de confirmación permanece disponible en la parte inferior de la pantalla.
+
+Los bocetos realizados a mano se encuentran incluidos en la versión PDF/Word de la entrega.
+
+4. WIREFRAME DIGITAL
+
+A partir de los bocetos iniciales se desarrollaron wireframes digitales de fidelidad media (Mid-Fi).
+
+Se respetaron las medidas establecidas por la consigna:
+
+* Escritorio: 1440 px, utilizando una grilla de 12 columnas.
+* Celular: 375 px, utilizando una grilla de 4 columnas.
+
+Los wireframes mantienen la estructura planteada en los bocetos, pero incorporan una organización visual más precisa, botones, tarjetas y una distribución definida de los elementos.
+
+Los tres wireframes desarrollados son:
+
+1. Home / Grilla semanal de clases.
+2. Detalle de clase / Reserva.
+3. Pases y compra o renovación.
+
+Las capturas de los wireframes se encuentran incluidas en la entrega PDF/Word.
+
+5. USO DE INTELIGENCIA ARTIFICIAL
+
+Durante el desarrollo de la actividad se utilizó inteligencia artificial como herramienta de apoyo para analizar la estructura del sitio y pensar la experiencia de usuario.
+
+Para el sitemap y la clasificación entre MPA y SPA se utilizó un prompt orientado a arquitectura web. La respuesta permitió obtener una propuesta inicial de estructura y determinar qué secciones podían beneficiarse de cada modelo.
+
+También se utilizó inteligencia artificial como apoyo para analizar la experiencia mobile-first.
+
+En este caso se consultó sobre la distribución de los componentes para la grilla de clases, el detalle de una reserva y la compra o renovación de pases desde dispositivos móviles.
+
+Entre las recomendaciones obtenidas se destacó el uso de pestañas para los días de la semana, tarjetas verticales para las clases y botones de acción fijos en la parte inferior de la pantalla.
+
+6. CAMBIOS REALIZADOS SOBRE LAS PROPUESTAS DE IA
+
+Las propuestas obtenidas mediante inteligencia artificial fueron utilizadas como punto de partida y posteriormente adaptadas al proyecto.
+
+Se incorporaron elementos que no estaban contemplados inicialmente, como la pantalla de confirmación de reserva y el historial dentro de "Mi cuenta".
+
+También se modificaron algunos nombres y estructuras para adaptarlos mejor a las necesidades de Sísifo Gym.
+
+Finalmente, se verificó que las funcionalidades incluidas estuvieran relacionadas con los requerimientos funcionales definidos en la Actividad 1, evitando incorporar características innecesarias.
+
+La propuesta del botón de acción fijo en dispositivos móviles también fue incorporada a los diferentes diseños, ya que facilita las acciones principales y reduce la necesidad de desplazarse constantemente por la pantalla.
+
+En conclusión, la estructura propuesta busca combinar las ventajas de MPA y SPA según el tipo de contenido y funcionalidad, priorizando una experiencia rápida, clara y adaptada principalmente al uso desde dispositivos móviles.
