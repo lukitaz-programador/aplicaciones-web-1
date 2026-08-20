@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SisyfoGym - Classes Schedule</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131314",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#b4b5b5",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "secondary-container": "#454747",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c5c9ac",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-container": "#596c00",
+                        "secondary": "#c6c6c7",
+                        "inverse-surface": "#e5e2e3",
+                        "primary-container": "#caf300",
+                        "primary-fixed-dim": "#b0d500",
+                        "surface-container-highest": "#353436",
+                        "surface-container-high": "#2a2a2b",
+                        "surface-tint": "#b0d500",
+                        "surface-bright": "#39393A",
+                        "on-tertiary-container": "#656465",
+                        "on-tertiary": "#303031",
+                        "surface-container-low": "#1c1b1c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474648",
+                        "outline-muted": "#444932",
+                        "error-container": "#93000a",
+                        "energetic-lime": "#D4FF00",
+                        "tertiary": "#ffffff",
+                        "deep-charcoal": "#1A1A1B",
+                        "on-error": "#690005",
+                        "outline-variant": "#444932",
+                        "surface": "#131314",
+                        "primary-fixed": "#caf300",
+                        "inverse-on-surface": "#313031",
+                        "surface-dim": "#131314",
+                        "outline": "#8f9378",
+                        "inverse-primary": "#536600",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container": "#201f20",
+                        "on-primary-fixed": "#171e00",
+                        "on-background": "#e5e2e3",
+                        "on-primary-fixed-variant": "#3e4c00",
+                        "on-surface": "#e5e2e3",
+                        "surface-variant": "#353436",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "tertiary-container": "#e4e2e3",
+                        "on-tertiary-fixed": "#1b1b1c",
+                        "on-primary": "#2a3400",
+                        "tertiary-fixed": "#e4e2e3",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#2f3131"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "24px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131314; color: #e5e2e3; }
+        .glass-panel {
+            background: rgba(42, 42, 43, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .class-slot:hover { box-shadow: 0 0 15px rgba(212, 255, 0, 0.2); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col font-body-md bg-background text-on-background pb-[90px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/80 dark:bg-background/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-margin-mobile py-base">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-energetic-lime dark:text-energetic-lime text-2xl" data-icon="fitness_center">fitness_center</span>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary dark:text-primary">SisyfoGym</span>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/30">
+<img alt="User profile picture" class="w-full h-full object-cover" data-alt="A close up portrait of a fit individual with a determined expression, lit with high-contrast, moody gym lighting, casting deep shadows. High resolution fitness photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKyOCr1_NmnAAQBhYsuNOtOSmmsvn8aaScTiWkXhtIdf2pUQZv5i-PFgk-uRrE5NBWZ-JSQy9YddtBmxvVeHeXAb9w0HbqpDzd3woXYzI5KeBPn9OTQu9CbVJ33PScfDXDKplC_Zqw6H5FMG5u9ZPae6UEke5EsdIgUSxGwCSSej0F4Ug9BobWWMK3HHlJwrYDL61vIdmq3yBuXn8J1ZdLncNP2jAZfVLGwnwYId_OAhVDwDyJn6o"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-[80px] lg:pt-[100px] pb-lg">
+<div class="mb-lg">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg mb-xs">Schedule</h1>
+<p class="text-body-md font-body-md text-secondary">Find your rhythm. Book your classes.</p>
+</div>
+<!-- Filters / Controls -->
+<div class="flex flex-wrap gap-sm mb-lg">
+<button class="bg-surface-container-high rounded-full px-4 py-2 flex items-center gap-2 text-label-bold font-label-bold text-primary hover:bg-surface-bright transition-colors">
+<span>All Classes</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="bg-energetic-lime text-deep-charcoal rounded-full px-4 py-2 flex items-center gap-2 text-label-bold font-label-bold hover:shadow-[0_0_15px_rgba(212,255,0,0.4)] transition-all">
+<span>Clases Asistidas</span>
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</button>
+</div>
+<!-- Schedule Grid (Mobile List, Desktop Grid) -->
+<div class="glass-panel rounded-xl overflow-hidden relative">
+<!-- Abstract background graphic for gym hours -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: repeating-linear-gradient(45deg, #ffffff 0, #ffffff 1px, transparent 1px, transparent 20px);"></div>
+<!-- Desktop Header -->
+<div class="hidden md:grid grid-cols-8 border-b border-outline-variant/20 bg-surface-container/50 p-4">
+<div class="text-label-bold font-label-bold text-secondary">Time</div>
+<div class="text-label-bold font-label-bold text-center">Mon</div>
+<div class="text-label-bold font-label-bold text-center">Tue</div>
+<div class="text-label-bold font-label-bold text-center">Wed</div>
+<div class="text-label-bold font-label-bold text-center text-energetic-lime">Thu</div>
+<div class="text-label-bold font-label-bold text-center">Fri</div>
+<div class="text-label-bold font-label-bold text-center opacity-50">Sat</div>
+<div class="text-label-bold font-label-bold text-center opacity-50">Sun</div>
+</div>
+<!-- Grid Body -->
+<div class="flex flex-col md:grid md:grid-cols-8 divide-y md:divide-y-0 md:divide-x divide-outline-variant/10">
+<!-- 06:00 AM Row -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-8 border-b border-outline-variant/10 group">
+<div class="p-4 text-label-sm font-label-sm text-secondary md:border-r border-outline-variant/10 group-hover:text-primary transition-colors">06:00 AM</div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">HIIT</div>
+<div class="text-label-sm font-label-sm text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 45m</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px]"></div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">HIIT</div>
+<div class="text-label-sm font-label-sm text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 45m</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px]"></div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">HIIT</div>
+<div class="text-label-sm font-label-sm text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">timer</span> 45m</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px] bg-background/50"></div>
+<div class="p-2 md:p-4 min-h-[80px] bg-background/50"></div>
+</div>
+<!-- 08:00 AM Row (Highlighted Clases Asistidas) -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-8 border-b border-outline-variant/10 group">
+<div class="p-4 text-label-sm font-label-sm text-secondary md:border-r border-outline-variant/10 group-hover:text-primary transition-colors">08:00 AM</div>
+<div class="p-2 md:p-4 min-h-[100px]"></div>
+<div class="p-2 md:p-4 min-h-[100px] relative">
+<div class="absolute inset-2 bg-energetic-lime/10 border border-energetic-lime/30 rounded-lg p-3 flex flex-col justify-between class-slot transition-all cursor-pointer hover:bg-energetic-lime/20 z-10">
+<div>
+<div class="text-label-bold font-label-bold text-energetic-lime mb-1 flex justify-between items-start">
+                                    Clase Asistida
+                                    <span class="material-symbols-outlined text-[16px]" data-weight="fill">bolt</span>
+</div>
+<div class="text-label-sm font-label-sm text-primary">Upper Body Focus</div>
+</div>
+<div class="text-label-sm font-label-sm text-secondary mt-2 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small portrait of a muscular gym trainer with a serious expression, dark modern lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDoGZDyUeN5SR5mZBXD8AtJgBEef5wdGnPGDhGEBxrdrUjp1KZkSuXmlt36LlSU0GnCX5ltmNgD_qEgyg9E7rtTSpVtQFcVq_VB4tiWq9t4bk8pwCA26vbG0_WUvFyqdFLy6S_Yv3PUkwiC7w12AJwKUoyvBP7IAXSmn24LyTp-5PjTcvXggRKq-E8KcX4ZH7NBj7GFgc0mxFdUL77K9NI9lq7lMFBMzM9jnXV6MoY_FJgi_oGZc"/>
+</div>
+                                Coach Alex
+                            </div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[100px]"></div>
+<div class="p-2 md:p-4 min-h-[100px] relative">
+<div class="absolute inset-2 bg-energetic-lime/10 border border-energetic-lime/30 rounded-lg p-3 flex flex-col justify-between class-slot transition-all cursor-pointer hover:bg-energetic-lime/20 z-10">
+<div>
+<div class="text-label-bold font-label-bold text-energetic-lime mb-1 flex justify-between items-start">
+                                    Clase Asistida
+                                    <span class="material-symbols-outlined text-[16px]" data-weight="fill">bolt</span>
+</div>
+<div class="text-label-sm font-label-sm text-primary">Leg Day Matrix</div>
+</div>
+<div class="text-label-sm font-label-sm text-secondary mt-2 flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Small portrait of a female fitness instructor looking determined, moody dark gym background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9FIRok8ZR0ZbyATUTMasAGckf1LwTNOPHR5ISq5mrij1Obe_m722kSHLTlEboYK9sBSMYB8yfPwdwibwK5uiLGgSF_ik1L_5co3grjnHtAvhvZCWmHR6tYmm4v7JAYU-OTPgUTR20-UD4Dnl-iwaegmMN4CHRsNeSxMtlOUF4bEuZvQzCvqbp3cMAUgddGR4FtfKJo9x4NV1KEMTX3vXD-vsVUQu4QUBzBTRgVOElpES0JPezNc"/>
+</div>
+                                Coach Sarah
+                            </div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[100px]"></div>
+<div class="p-2 md:p-4 min-h-[100px] bg-background/50">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-outline-variant class-slot transition-all cursor-pointer opacity-70 hover:opacity-100">
+<div class="text-label-bold font-label-bold text-primary mb-1">Mobility</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[100px] bg-background/50"></div>
+</div>
+<!-- 18:00 PM Row -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-8 group">
+<div class="p-4 text-label-sm font-label-sm text-secondary md:border-r border-outline-variant/10 group-hover:text-primary transition-colors">18:00 PM</div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">Powerlifting</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px]"></div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">Powerlifting</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px]"></div>
+<div class="p-2 md:p-4 min-h-[80px]">
+<div class="bg-surface-container-high rounded-lg p-3 h-full border-l-2 border-primary-container class-slot transition-all cursor-pointer">
+<div class="text-label-bold font-label-bold text-primary mb-1">Powerlifting</div>
+</div>
+</div>
+<div class="p-2 md:p-4 min-h-[80px] bg-background/50"></div>
+<div class="p-2 md:p-4 min-h-[80px] bg-background/50"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-surface-container dark:bg-surface-container fixed bottom-0 w-full z-50 rounded-t-xl shadow-lg flex justify-around items-center h-[72px] pb-safe px-4">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="payments">payments</span>
+<span class="text-label-sm font-label-sm">Planes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-energetic-lime font-bold hover:opacity-80 transition-opacity scale-95 duration-200 w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_month" data-weight="fill">calendar_month</span>
+<span class="text-label-sm font-label-sm">Clases</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors w-1/4 h-full" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="contact_support">contact_support</span>
+<span class="text-label-sm font-label-sm">Contacto</span>
+</a>
+</nav>
+<!-- Desktop Side/Top Nav placeholder to satisfy layout requirement (hidden on mobile, but structurally present) -->
+<div class="hidden md:flex fixed right-gutter top-[100px] flex-col gap-sm z-40">
+<div class="glass-panel rounded-xl p-4 flex flex-col gap-4">
+<h3 class="text-label-bold font-label-bold text-primary mb-2">My Bookings</h3>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-energetic-lime"></div>
+<div>
+<div class="text-label-sm font-label-sm text-primary">Clase Asistida</div>
+<div class="text-label-sm font-label-sm text-secondary">Today, 18:00 PM</div>
+</div>
+</div>
+<button class="w-full mt-2 py-2 border border-outline-variant/30 rounded-lg text-label-sm font-label-sm hover:bg-surface-bright transition-colors">View All</button>
+</div>
+</div>
+</body></html>

@@ -155,3 +155,16 @@ Finalmente, se verificó que las funcionalidades incluidas estuvieran relacionad
 La propuesta del botón de acción fijo en dispositivos móviles también fue incorporada a los diferentes diseños, ya que facilita las acciones principales y reduce la necesidad de desplazarse constantemente por la pantalla.
 
 En conclusión, la estructura propuesta busca combinar las ventajas de MPA y SPA según el tipo de contenido y funcionalidad, priorizando una experiencia rápida, clara y adaptada principalmente al uso desde dispositivos móviles.
+
+
+Para el diseño de la interfaz de la aplicación para dispositivos móviles, primero hice un diseño boceto y luego lo digitalice con un prompt y la herramienta Stitch IA de Google:
+
+necesito diseñar una aplicacion para un gimnasio spa con una barra de navegacion fija que tenga el logo del gimnasio  que seria para volver al menu principal, y luego 3 opciones de tabeo planes, clases y horarios y contacto y a la derecha debe mostrarse la foto de perfil del usuario iniciado, en el menu principal debe haber la promocion central con un mensaje motivador y una explicacion breve de la ubicacion del gimnasio de las calses con profesores y demas y abajo del todo los contactos
+
+luego en la pagina de contactos debe estar el gmail. facebook, instagram, whatsapp y tiktok con sus respectivos logos y nombres @ 
+
+despues en la pagina de planes los planes mensuales, trimestrales, semestrales y anuales con sus respectivos precios y sistemas de inscripcion y registro 
+
+en la pagina de clases debe haber una especie de grilla modo calendario con los dias de la semana y los horarios disponibles cuando el gym esta abierto y en otro color marcado los dias que hay clases asistidas por profesores de la organizacion 
+
+y por ultimo una pagina de loguin donde te permita registrarte con mail y contraseña o ingresar con google y ademas modificar tu foto de perfil 

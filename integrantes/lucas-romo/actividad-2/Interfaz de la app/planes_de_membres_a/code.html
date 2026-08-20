@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SisyfoGym - Planes</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#131314",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-secondary-container": "#b4b5b5",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "secondary-container": "#454747",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c5c9ac",
+                        "on-secondary-fixed-variant": "#454747",
+                        "on-primary-container": "#596c00",
+                        "secondary": "#c6c6c7",
+                        "inverse-surface": "#e5e2e3",
+                        "primary-container": "#caf300",
+                        "primary-fixed-dim": "#b0d500",
+                        "surface-container-highest": "#353436",
+                        "surface-container-high": "#2a2a2b",
+                        "surface-tint": "#b0d500",
+                        "surface-bright": "#39393A",
+                        "on-tertiary-container": "#656465",
+                        "on-tertiary": "#303031",
+                        "surface-container-low": "#1c1b1c",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474648",
+                        "outline-muted": "#444932",
+                        "error-container": "#93000a",
+                        "energetic-lime": "#D4FF00",
+                        "tertiary": "#ffffff",
+                        "deep-charcoal": "#1A1A1B",
+                        "on-error": "#690005",
+                        "outline-variant": "#444932",
+                        "surface": "#131314",
+                        "primary-fixed": "#caf300",
+                        "inverse-on-surface": "#313031",
+                        "surface-dim": "#131314",
+                        "outline": "#8f9378",
+                        "inverse-primary": "#536600",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container": "#201f20",
+                        "on-primary-fixed": "#171e00",
+                        "on-background": "#e5e2e3",
+                        "on-primary-fixed-variant": "#3e4c00",
+                        "on-surface": "#e5e2e3",
+                        "surface-variant": "#353436",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "tertiary-container": "#e4e2e3",
+                        "on-tertiary-fixed": "#1b1b1c",
+                        "on-primary": "#2a3400",
+                        "tertiary-fixed": "#e4e2e3",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#2f3131"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "24px",
+                        "md": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"],
+                        "label-bold": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-xl": ["Montserrat"],
+                        "headline-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Custom glow for primary buttons */
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(212, 255, 0, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen font-body-md flex flex-col pb-[90px] md:pb-0 pt-[80px]">
+<!-- TopAppBar (Hidden on Mobile, visible on Desktop) -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl shadow-sm hidden md:flex justify-between items-center px-margin-mobile py-base h-[80px]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-energetic-lime text-3xl">fitness_center</span>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary">SisyfoGym</span>
+</div>
+<nav class="flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="text-energetic-lime font-label-bold text-label-bold hover:opacity-80 transition-opacity flex flex-col items-center" href="#">
+                Planes
+                <div class="h-1 w-full bg-energetic-lime rounded-full mt-1"></div>
+</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:opacity-80 transition-opacity" href="#">Clases</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:opacity-80 transition-opacity" href="#">Contacto</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+</div>
+</header>
+<!-- Mobile Header -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl shadow-sm flex md:hidden justify-between items-center px-margin-mobile py-base h-[72px]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-energetic-lime text-2xl">fitness_center</span>
+<span class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary">SisyfoGym</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">person</span>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-lg md:py-xl">
+<!-- Header Section -->
+<div class="text-center mb-lg">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-sm">Membresías</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Elige el plan que mejor se adapte a tu objetivo. Todos los planes incluyen acceso a zonas de peso libre, cardio y sauna.</p>
+</div>
+<!-- Plans Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Mensual Plan -->
+<div class="bg-surface-container-high rounded-xl p-md border border-outline-variant/30 flex flex-col hover:border-outline-variant transition-colors group">
+<div class="mb-sm">
+<span class="bg-surface-container py-1 px-3 rounded-full text-label-sm font-label-sm text-tertiary inline-block mb-3">Flexibilidad</span>
+<h2 class="font-headline-md text-headline-md text-primary">Mensual</h2>
+</div>
+<div class="mb-md">
+<span class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">$50</span>
+<span class="text-on-surface-variant font-body-md text-body-md">/mes</span>
+</div>
+<ul class="space-y-3 mb-lg flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Acceso total al gimnasio</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Uso de lockers básicos</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-surface-variant text-xl">cancel</span>
+<span class="font-body-md text-body-md text-surface-variant">Clases grupales incluidas</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 bg-transparent border-2 border-white/20 text-primary font-label-bold text-label-bold rounded-lg hover:bg-white/5 transition-colors">
+                    Registrarme
+                </button>
+</div>
+<!-- Trimestral Plan -->
+<div class="bg-surface-container-high rounded-xl p-md border border-outline-variant/30 flex flex-col hover:border-outline-variant transition-colors">
+<div class="mb-sm">
+<span class="bg-surface-container py-1 px-3 rounded-full text-label-sm font-label-sm text-tertiary inline-block mb-3">Compromiso Corto</span>
+<h2 class="font-headline-md text-headline-md text-primary">Trimestral</h2>
+</div>
+<div class="mb-md">
+<span class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">$135</span>
+<span class="text-on-surface-variant font-body-md text-body-md">/3 meses</span>
+<div class="text-energetic-lime font-label-sm text-label-sm mt-1">Ahorras $15</div>
+</div>
+<ul class="space-y-3 mb-lg flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Acceso total al gimnasio</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Uso de lockers básicos</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">1 Clase grupal a la semana</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 bg-transparent border-2 border-white/20 text-primary font-label-bold text-label-bold rounded-lg hover:bg-white/5 transition-colors">
+                    Registrarme
+                </button>
+</div>
+<!-- Semestral Plan (Most Popular) -->
+<div class="bg-surface-container-highest rounded-xl p-md border-2 border-energetic-lime/50 shadow-[0_0_30px_rgba(212,255,0,0.05)] flex flex-col relative transform md:-translate-y-2">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-energetic-lime text-deep-charcoal px-4 py-1 rounded-full font-label-bold text-label-sm shadow-[0_0_10px_rgba(212,255,0,0.3)]">
+                    Más Popular
+                </div>
+<div class="mb-sm mt-2">
+<h2 class="font-headline-md text-headline-md text-primary">Semestral</h2>
+</div>
+<div class="mb-md">
+<span class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">$250</span>
+<span class="text-on-surface-variant font-body-md text-body-md">/6 meses</span>
+<div class="text-energetic-lime font-label-sm text-label-sm mt-1">Ahorras $50</div>
+</div>
+<ul class="space-y-3 mb-lg flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-primary">Acceso total al gimnasio 24/7</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-primary">Locker VIP asignado</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-primary">Clases grupales ilimitadas</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-primary">1 Sesión Nutricional al mes</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 bg-energetic-lime text-deep-charcoal font-label-bold text-label-bold rounded-lg btn-glow transition-all font-bold">
+                    Registrarme
+                </button>
+</div>
+<!-- Anual Plan -->
+<div class="bg-surface-container-high rounded-xl p-md border border-outline-variant/30 flex flex-col hover:border-outline-variant transition-colors">
+<div class="mb-sm">
+<span class="bg-surface-container py-1 px-3 rounded-full text-label-sm font-label-sm text-tertiary inline-block mb-3">Máximo Rendimiento</span>
+<h2 class="font-headline-md text-headline-md text-primary">Anual</h2>
+</div>
+<div class="mb-md">
+<span class="font-headline-xl text-headline-lg md:text-headline-xl text-primary">$450</span>
+<span class="text-on-surface-variant font-body-md text-body-md">/año</span>
+<div class="text-energetic-lime font-label-sm text-label-sm mt-1">Ahorras $150 (3 meses gratis)</div>
+</div>
+<ul class="space-y-3 mb-lg flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Acceso total al gimnasio 24/7</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Locker VIP asignado</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Clases grupales ilimitadas</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-energetic-lime text-xl" data-weight="fill">check_circle</span>
+<span class="font-body-md text-body-md text-secondary">Invitado gratis los fines de semana</span>
+</li>
+</ul>
+<button class="w-full py-3 px-4 bg-transparent border-2 border-white/20 text-primary font-label-bold text-label-bold rounded-lg hover:bg-white/5 transition-colors">
+                    Registrarme
+                </button>
+</div>
+</div>
+<!-- Call to action feature -->
+<div class="mt-xl rounded-xl overflow-hidden relative flex flex-col md:flex-row items-center border border-outline-variant/20 bg-surface-container-low min-h-[300px]">
+<div class="w-full md:w-1/2 p-lg z-10 relative">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">¿No estás seguro de qué plan elegir?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Ven y conoce nuestras instalaciones sin compromiso. Solicita un pase de prueba de 1 día y experimenta la diferencia SisyfoGym.</p>
+<button class="py-3 px-6 bg-transparent border-2 border-energetic-lime text-energetic-lime font-label-bold text-label-bold rounded-lg hover:bg-energetic-lime/10 transition-colors inline-flex items-center gap-2">
+                    Solicitar Pase de Prueba
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-full md:absolute md:right-0 md:top-0 relative">
+<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-surface-container-low to-transparent z-10"></div>
+<img class="w-full h-full object-cover object-center grayscale opacity-60" data-alt="High quality photography of a modern luxury gym interior with state-of-the-art equipment, dark ambient lighting, and subtle energetic lime accents. Clean, elite aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVZR4K1O7G8zS89cYrrfuYbUbWjLXl2kToI4zJaUIsFSLbyO1xv7ZH-Km9trLSmIMlrt1WM2JKmqMiNzReAxzYK1ftLH1Sc1ETdg7QUED8NTrzejecedIJjZfaBrBHfBxILt3MZy4bc83UwchLQJFouDshM3fzXKqVzs2G2GPbqNdAittT6xxLOWDZfI2ESyyAftEPkJPa61S60q0jcLYROwSMquInQtO7XIytT7Ktuy8rzEMyr8"/>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Visible on Mobile, hidden on Desktop) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container shadow-lg flex md:hidden justify-around items-center h-[72px] pb-safe px-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors gap-1 w-16" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-energetic-lime font-bold scale-90 duration-200 gap-1 w-16" href="#">
+<span class="material-symbols-outlined" data-weight="fill">payments</span>
+<span class="text-label-sm font-label-sm">Planes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors gap-1 w-16" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-label-sm font-label-sm">Clases</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors gap-1 w-16" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="text-label-sm font-label-sm">Contacto</span>
+</a>
+</nav>
+</body></html>
